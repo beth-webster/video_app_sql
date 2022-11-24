@@ -25,3 +25,11 @@ GRANT UPDATE (link) ON core.videos TO developer;
 GRANT SELECT, INSERT, UPDATE, REFERENCES, TRIGGER ON ALL TABLES IN SCHEMA core TO dba;
 
 GRANT SELECT ON logging.history TO dba;
+
+GRANT SELECT ON   core.accounts
+				, core.payment_details
+TO finance;
+
+GRANT INSERT, UPDATE, SELECT ON   core.subscriptions 
+								, core.transactions
+TO finance;
